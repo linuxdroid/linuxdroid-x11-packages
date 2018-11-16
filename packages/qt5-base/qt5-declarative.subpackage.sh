@@ -1,4 +1,4 @@
-TERMUX_SUBPKG_INCLUDE="
+LINUXDROID_SUBPKG_INCLUDE="
 lib/libQt5Qml.so
 lib/libQt5Qml.so.5
 lib/libQt5Qml.so.5.11
@@ -23,5 +23,5 @@ libexec/qt/qmltooling
 lib/qt/qml
 "
 
-TERMUX_SUBPKG_DEPENDS="qt5-base"
-TERMUX_SUBPKG_DESCRIPTION="Classes for QML and JavaScript languages"
+LINUXDROID_SUBPKG_DEPENDS="qt5-base"
+LINUXDROID_SUBPKG_DESCRIPTION="Classes for QML and JavaScript languages"

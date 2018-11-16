@@ -6,7 +6,7 @@ diff -uNr mtpaint-3.40/src/spawn.c mtpaint-3.40.mod/src/spawn.c
  		env = "\\";
  #else
 -		env = "/tmp";
-+		env = "@TERMUX_PREFIX@/tmp";
++		env = "@LINUXDROID_PREFIX@/tmp";
  #endif
  	return (env);
  }
@@ -16,8 +16,8 @@ diff -uNr mtpaint-3.40/src/spawn.c mtpaint-3.40.mod/src/spawn.c
  #define HANDBOOK_BROWSER "firefox"
 -#define HANDBOOK_LOCATION "/usr/doc/mtpaint/index.html"
 -#define HANDBOOK_LOCATION2 "/usr/share/doc/mtpaint/index.html"
-+#define HANDBOOK_LOCATION "@TERMUX_PREFIX@/doc/mtpaint/index.html"
-+#define HANDBOOK_LOCATION2 "@TERMUX_PREFIX@/share/doc/mtpaint/index.html"
++#define HANDBOOK_LOCATION "@LINUXDROID_PREFIX@/doc/mtpaint/index.html"
++#define HANDBOOK_LOCATION2 "@LINUXDROID_PREFIX@/share/doc/mtpaint/index.html"
  
  #endif
  

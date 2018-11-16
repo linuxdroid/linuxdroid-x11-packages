@@ -6,7 +6,7 @@ diff -uNr transmission-2.94/libtransmission/platform.c transmission-2.94.mod/lib
              const char * pkg = PACKAGE_DATA_DIR;
              char * xdg = tr_env_get_string ("XDG_DATA_DIRS", NULL);
 -            const char * fallback = "/usr/local/share:/usr/share";
-+            const char * fallback = "@TERMUX_PREFIX@/share";
++            const char * fallback = "@LINUXDROID_PREFIX@/share";
              char * buf = tr_strdup_printf ("%s:%s:%s", (pkg?pkg:""), (xdg?xdg:""), fallback);
              tr_free (xdg);
              tmp = buf;

@@ -6,7 +6,7 @@ diff -uNr putty-0.70/unix/uxnoise.c putty-0.70.mod/unix/uxnoise.c
      }
  
 -    fp = popen("ls -al /tmp 2>/dev/null", "r");
-+    fp = popen("ls -al @TERMUX_PREFIX@/tmp 2>/dev/null", "r");
++    fp = popen("ls -al @LINUXDROID_PREFIX@/tmp 2>/dev/null", "r");
      if (fp) {
  	while ( (ret = fread(buf, 1, sizeof(buf), fp)) > 0)
  	    func(buf, ret);

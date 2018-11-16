@@ -6,7 +6,7 @@ diff -uNr feh-2.25.1/src/keyevents.c feh-2.25.1.mod/src/keyevents.c
  	free(confpath);
  
 -	if (!conf && ((conf = fopen("/etc/feh/keys", "r")) == NULL))
-+	if (!conf && ((conf = fopen("/data/data/com.termux/files/usr/etc/feh/keys", "r")) == NULL))
++	if (!conf && ((conf = fopen("/data/data/com.linuxdroid/files/usr/etc/feh/keys", "r")) == NULL))
  		return;
  
  	while (fgets(line, sizeof(line), conf)) {

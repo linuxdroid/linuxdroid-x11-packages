@@ -16,7 +16,7 @@ Steps to reproduce the behavior. If problem is related to command line programs,
 A clear and concise description of what you expected to happen.
 
 **Additional information**
-Post output of command `termux-info`.
+Post output of command `linuxdroid-info`.
 
 Depending on problem, additional information may be requested:
 

@@ -6,7 +6,7 @@ diff -uNr qemu-3.0.0/block.c qemu-3.0.0.mod/block.c
      tmpdir = getenv("TMPDIR");
      if (!tmpdir) {
 -        tmpdir = "/var/tmp";
-+        tmpdir = "@TERMUX_PREFIX@/var/tmp";
++        tmpdir = "@LINUXDROID_PREFIX@/var/tmp";
      }
      if (snprintf(filename, size, "%s/vl.XXXXXX", tmpdir) >= size) {
          return -EOVERFLOW;

@@ -42,13 +42,13 @@ diff -uNr The-Powder-Toy-93.3/SConscript The-Powder-Toy-93.3.mod/SConscript
  		if runSdlConfig:
  			try:
 -				env.ParseConfig('sdl-config --cflags')
-+				env.ParseConfig('bash /data/data/com.termux/files/usr/bin/sdl-config --cflags')
++				env.ParseConfig('bash /data/data/com.linuxdroid/files/usr/bin/sdl-config --cflags')
  				if GetOption('static'):
 -					env.ParseConfig('sdl-config --static-libs')
-+					env.ParseConfig('bash /data/data/com.termux/files/usr/bin/sdl-config --static-libs')
++					env.ParseConfig('bash /data/data/com.linuxdroid/files/usr/bin/sdl-config --static-libs')
  				else:
 -					env.ParseConfig('sdl-config --libs')
-+					env.ParseConfig('bash /data/data/com.termux/files/usr/bin/sdl-config --libs')
++					env.ParseConfig('bash /data/data/com.linuxdroid/files/usr/bin/sdl-config --libs')
  			except:
  				pass
  

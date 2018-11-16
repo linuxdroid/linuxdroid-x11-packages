@@ -6,7 +6,7 @@ diff -uNr putty-0.70/unix/uxshare.c putty-0.70.mod/unix/uxshare.c
  #include "ssh.h"
  
 -#define CONNSHARE_SOCKETDIR_PREFIX "/tmp/putty-connshare"
-+#define CONNSHARE_SOCKETDIR_PREFIX "@TERMUX_PREFIX@/tmp/putty-connshare"
++#define CONNSHARE_SOCKETDIR_PREFIX "@LINUXDROID_PREFIX@/tmp/putty-connshare"
  #define SALT_FILENAME "salt"
  #define SALT_SIZE 64
  

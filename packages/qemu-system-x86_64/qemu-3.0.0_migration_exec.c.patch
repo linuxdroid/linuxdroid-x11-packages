@@ -6,7 +6,7 @@ diff -uNr qemu-3.0.0/migration/exec.c qemu-3.0.0.mod/migration/exec.c
  {
      QIOChannel *ioc;
 -    const char *argv[] = { "/bin/sh", "-c", command, NULL };
-+    const char *argv[] = { "@TERMUX_PREFIX@/bin/sh", "-c", command, NULL };
++    const char *argv[] = { "@LINUXDROID_PREFIX@/bin/sh", "-c", command, NULL };
  
      trace_migration_exec_outgoing(command);
      ioc = QIO_CHANNEL(qio_channel_command_new_spawn(argv,
@@ -15,7 +15,7 @@ diff -uNr qemu-3.0.0/migration/exec.c qemu-3.0.0.mod/migration/exec.c
  {
      QIOChannel *ioc;
 -    const char *argv[] = { "/bin/sh", "-c", command, NULL };
-+    const char *argv[] = { "@TERMUX_PREFIX@/bin/sh", "-c", command, NULL };
++    const char *argv[] = { "@LINUXDROID_PREFIX@/bin/sh", "-c", command, NULL };
  
      trace_migration_exec_incoming(command);
      ioc = QIO_CHANNEL(qio_channel_command_new_spawn(argv,

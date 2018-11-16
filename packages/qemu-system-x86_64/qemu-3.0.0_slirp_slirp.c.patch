@@ -6,7 +6,7 @@ diff -uNr qemu-3.0.0/slirp/slirp.c qemu-3.0.0.mod/slirp/slirp.c
      }
      old_stat = *cached_stat;
 -    if (stat("/etc/resolv.conf", cached_stat) != 0) {
-+    if (stat("@TERMUX_PREFIX@/etc/resolv.conf", cached_stat) != 0) {
++    if (stat("@LINUXDROID_PREFIX@/etc/resolv.conf", cached_stat) != 0) {
          return -1;
      }
      if (cached_stat->st_dev == old_stat.st_dev
@@ -15,7 +15,7 @@ diff -uNr qemu-3.0.0/slirp/slirp.c qemu-3.0.0.mod/slirp/slirp.c
      unsigned if_index;
  
 -    f = fopen("/etc/resolv.conf", "r");
-+    f = fopen("@TERMUX_PREFIX@/etc/resolv.conf", "r");
++    f = fopen("@LINUXDROID_PREFIX@/etc/resolv.conf", "r");
      if (!f)
          return -1;
  

@@ -1,7 +1,7 @@
-TERMUX_SUBPKG_DEPENDS="qt5-base, qt5-base-dev, qt5-x11extras"
-TERMUX_SUBPKG_DESCRIPTION="Qt platform-specific APIs for X11"
+LINUXDROID_SUBPKG_DEPENDS="qt5-base, qt5-base-dev, qt5-x11extras"
+LINUXDROID_SUBPKG_DESCRIPTION="Qt platform-specific APIs for X11"
 
-TERMUX_SUBPKG_INCLUDE="
+LINUXDROID_SUBPKG_INCLUDE="
 include/qt/QtX11Extras
 lib/cmake/Qt5X11Extras
 lib/libQt5X11Extras.prl

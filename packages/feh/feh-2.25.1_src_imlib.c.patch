@@ -7,7 +7,7 @@ index d9c5cd0..b91d8b2 100644
  	/* Set up the font stuff */
  	imlib_add_path_to_font_path(".");
 -	imlib_add_path_to_font_path(PREFIX "/share/feh/fonts");
-+	imlib_add_path_to_font_path("/data/data/com.termux/files/usr/share/feh/fonts");
++	imlib_add_path_to_font_path("/data/data/com.linuxdroid/files/usr/share/feh/fonts");
  
  	return;
  }
@@ -16,7 +16,7 @@ index d9c5cd0..b91d8b2 100644
  		basename++;
  
 -	tmpname = feh_unique_filename("/tmp/", basename);
-+	tmpname = feh_unique_filename("/data/data/com.termux/files/usr/tmp/", basename);
++	tmpname = feh_unique_filename("/data/data/com.linuxdroid/files/usr/tmp/", basename);
  
  	if (strlen(tmpname) > (NAME_MAX-6))
  		tmpname[NAME_MAX-7] = '\0';
@@ -25,7 +25,7 @@ index d9c5cd0..b91d8b2 100644
  			path = "";
  	} else
 -		path = "/tmp/";
-+		path = "/data/data/com.termux/files/usr/tmp/";
++		path = "/data/data/com.linuxdroid/files/usr/tmp/";
  
  	curl = curl_easy_init();
  	if (!curl) {

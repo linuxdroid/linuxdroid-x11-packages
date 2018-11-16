@@ -6,7 +6,7 @@ diff -uNr gtk-3.22.30/modules/printbackends/cups/gtkprintbackendcups.c gtk-3.22.
  /* Ordering matters for default preference */
  static const char *lpoptions_locations[] = {
 -  "/etc/cups/lpoptions",
-+  "/data/data/com.termux/files/usr/etc/cups/lpoptions",
++  "/data/data/com.linuxdroid/files/usr/etc/cups/lpoptions",
    ".lpoptions",
    ".cups/lpoptions"
  };

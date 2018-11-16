@@ -27,7 +27,7 @@
 #include <unistd.h>
 
 #ifdef __ANDROID__
-#define SHMDIR "/data/data/com.termux/files/usr/tmp/"
+#define SHMDIR "/data/data/com.linuxdroid/files/usr/tmp/"
 #else
 #define SHMDIR "/dev/shm/"
 #endif

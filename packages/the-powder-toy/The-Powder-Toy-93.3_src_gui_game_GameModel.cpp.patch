@@ -5,7 +5,7 @@ diff -uNr The-Powder-Toy-93.3/src/gui/game/GameModel.cpp The-Powder-Toy-93.3.mod
  	brushList.push_back(new TriangleBrush(ui::Point(4, 4)));
  
  	//Load more from brushes folder
-+    Client::Ref().MakeDirectory("/data/data/com.termux/files/home/.powdertoy");
++    Client::Ref().MakeDirectory("/data/data/com.linuxdroid/files/home/.powdertoy");
  	std::vector<string> brushFiles = Client::Ref().DirectorySearch(BRUSH_DIR, "", ".ptb");
  	for (size_t i = 0; i < brushFiles.size(); i++)
  	{

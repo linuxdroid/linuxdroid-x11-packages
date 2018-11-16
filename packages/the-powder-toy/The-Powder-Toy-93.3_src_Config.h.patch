@@ -10,7 +10,7 @@ diff -uNr The-Powder-Toy-93.3/src/Config.h The-Powder-Toy-93.3.mod/src/Config.h
 -#else
 -#define IDENT_PLATFORM "LIN32"
 -#endif
-+#define IDENT_PLATFORM "TERMUX"
++#define IDENT_PLATFORM "LINUXDROID"
  #elif defined(MACOSX)
  #define IDENT_PLATFORM "MACOSX"
  #else
@@ -19,13 +19,13 @@ diff -uNr The-Powder-Toy-93.3/src/Config.h The-Powder-Toy-93.3.mod/src/Config.h
  #define STATICSERVER "static.powdertoy.co.uk"
  
 -#define LOCAL_SAVE_DIR "Saves"
-+#define LOCAL_SAVE_DIR "/data/data/com.termux/files/home/.powdertoy/saves"
++#define LOCAL_SAVE_DIR "/data/data/com.linuxdroid/files/home/.powdertoy/saves"
  
 -#define STAMPS_DIR "stamps"
-+#define STAMPS_DIR "/data/data/com.termux/files/home/.powdertoy/stamps"
++#define STAMPS_DIR "/data/data/com.linuxdroid/files/home/.powdertoy/stamps"
  
 -#define BRUSH_DIR "Brushes"
-+#define BRUSH_DIR "/data/data/com.termux/files/home/.powdertoy/brushes"
++#define BRUSH_DIR "/data/data/com.linuxdroid/files/home/.powdertoy/brushes"
  
  //Number of unique thumbnails to have in cache at one time
  #define THUMB_CACHE_SIZE 256

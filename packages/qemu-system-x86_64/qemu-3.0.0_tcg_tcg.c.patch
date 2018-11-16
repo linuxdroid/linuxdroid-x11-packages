@@ -6,7 +6,7 @@ diff -uNr qemu-3.0.0/tcg/tcg.c qemu-3.0.0.mod/tcg/tcg.c
         One can use readelf, objdump, or other inspection utilities.  */
      {
 -        FILE *f = fopen("/tmp/qemu.jit", "w+b");
-+        FILE *f = fopen("@TERMUX_PREFIX@/tmp/qemu.jit", "w+b");
++        FILE *f = fopen("@LINUXDROID_PREFIX@/tmp/qemu.jit", "w+b");
          if (f) {
              if (fwrite(img, img_size, 1, f) != img_size) {
                  /* Avoid stupid unused return value warning for fwrite.  */

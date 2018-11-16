@@ -50,7 +50,7 @@ check_package() {
             LATEST_VERSION=$(curl -s "https://www.archlinux.org/packages/${repo}/${arch}/${1}/" | grep 'itemprop="version"' | cut -d'"' -f4 | cut -d- -f1 | cut -d+ -f1)
             if [ -n "${LATEST_VERSION}" ]; then
                 if [ -f "${PACKAGES_DIR}/${1}/build.sh" ]; then
-                    CURRENT_VERSION=$(grep 'TERMUX_PKG_VERSION=' "${PACKAGES_DIR}/${1}/build.sh" | cut -d= -f2)
+                    CURRENT_VERSION=$(grep 'LINUXDROID_PKG_VERSION=' "${PACKAGES_DIR}/${1}/build.sh" | cut -d= -f2)
                 fi
 
                 echo "Package: ${1}"

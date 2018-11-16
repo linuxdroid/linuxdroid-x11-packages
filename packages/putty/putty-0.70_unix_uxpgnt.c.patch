@@ -6,7 +6,7 @@ diff -uNr putty-0.70/unix/uxpgnt.c putty-0.70.mod/unix/uxpgnt.c
  }
  
 -#define PAGEANT_DIR_PREFIX "/tmp/pageant"
-+#define PAGEANT_DIR_PREFIX "@TERMUX_PREFIX@/tmp/pageant"
++#define PAGEANT_DIR_PREFIX "@LINUXDROID_PREFIX@/tmp/pageant"
  
  const char *const appname = "Pageant";
  

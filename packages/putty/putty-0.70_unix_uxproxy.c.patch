@@ -6,7 +6,7 @@ diff -uNr putty-0.70/unix/uxproxy.c putty-0.70.mod/unix/uxproxy.c
  	    noncloexec(0);
  	    noncloexec(1);
 -	    execl("/bin/sh", "sh", "-c", cmd, (void *)NULL);
-+	    execl("@TERMUX_PREFIX@/bin/sh", "sh", "-c", cmd, (void *)NULL);
++	    execl("@LINUXDROID_PREFIX@/bin/sh", "sh", "-c", cmd, (void *)NULL);
  	    _exit(255);
  	}
  

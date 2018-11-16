@@ -14,7 +14,7 @@ diff -uNr The-Powder-Toy-93.3/src/gui/game/GameController.cpp The-Powder-Toy-93.
  			gameSave->authors = localSaveInfo;
  			
  			gameModel->SetSaveFile(&tempSave);
-+			Client::Ref().MakeDirectory("/data/data/com.termux/files/home/.powdertoy");
++			Client::Ref().MakeDirectory("/data/data/com.linuxdroid/files/home/.powdertoy");
  			Client::Ref().MakeDirectory(LOCAL_SAVE_DIR);
  			std::vector<char> saveData = gameSave->Serialise();
  			if (saveData.size() == 0)

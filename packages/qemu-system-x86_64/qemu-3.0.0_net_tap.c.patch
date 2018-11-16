@@ -6,7 +6,7 @@ diff -uNr qemu-3.0.0/net/tap.c qemu-3.0.0.mod/net/tap.c
              *parg++ = NULL;
  
 -            execv("/bin/sh", args);
-+            execv("@TERMUX_PREFIX@/bin/sh", args);
++            execv("@LINUXDROID_PREFIX@/bin/sh", args);
          } else {
              /* assume helper is just the executable path name */
  

@@ -6,7 +6,7 @@ diff -uNr mtpaint-3.40/src/main.c mtpaint-3.40.mod/src/main.c
  	g_thread_init(NULL);
  #endif
 -	inifile_init("/etc/mtpaint/mtpaintrc", "~/.mtpaint");
-+	inifile_init("@TERMUX_PREFIX@/etc/mtpaint/mtpaintrc", "~/.mtpaint");
++	inifile_init("@LINUXDROID_PREFIX@/etc/mtpaint/mtpaintrc", "~/.mtpaint");
  
  #ifdef U_NLS
  #if GTK_MAJOR_VERSION == 1

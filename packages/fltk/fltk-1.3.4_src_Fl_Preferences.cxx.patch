@@ -16,7 +16,7 @@ diff -uNr fltk-1.3.4/src/Fl_Preferences.cxx fltk-1.3.4.mod/src/Fl_Preferences.cx
        } 
      case SYSTEM:
 -      strcpy(filename, "/etc/fltk/");
-+      strcpy(filename, "/data/data/com.termux/files/usr/etc/fltk/");
++      strcpy(filename, "/data/data/com.linuxdroid/files/usr/etc/fltk/");
        break;
    } 
    snprintf(filename + strlen(filename), sizeof(filename) - strlen(filename),

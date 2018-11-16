@@ -6,10 +6,10 @@ TARGET_ARCHITECTURE="aarch64"
 
 ##############################################################################
 
-BUILD_LOG_FILE="termux-build.log"
+BUILD_LOG_FILE="linuxdroid-build.log"
 SETUP_LOG_FILE="setup-build-environment.log"
 BUILD_FINISHED_CONTROL_FILE="/tmp/.build-finished"
-PACKAGES_ARCHIVE_FILE="termux-x11-packages_${TARGET_ARCHITECTURE}.tar"
+PACKAGES_ARCHIVE_FILE="linuxdroid-x11-packages_${TARGET_ARCHITECTURE}.tar"
 
 ## Print message every 5 minutes.
 timed_message() {
@@ -25,8 +25,8 @@ timed_message() {
     done
 }
 
-if [ ! -e "./termux-packages/.initialized" ]; then
-    echo -n "[*] Initializing git submodules (termux/termux-packages.git)... "
+if [ ! -e "./linuxdroid-packages/.initialized" ]; then
+    echo -n "[*] Initializing git submodules (linuxdroid/linuxdroid-packages.git)... "
     if git submodule update --init --recursive > /dev/null 2>&1; then
         echo "ok"
     else
@@ -35,18 +35,18 @@ if [ ! -e "./termux-packages/.initialized" ]; then
     fi
 
     echo -n "[*] Copying x11 packages to build environment... "
-    if cp -a ./packages/* ./termux-packages/packages/ > /dev/null 2>&1; then
+    if cp -a ./packages/* ./linuxdroid-packages/packages/ > /dev/null 2>&1; then
         echo "ok"
     else
         echo "fail"
         exit 1
     fi
 
-	touch ./termux-packages/.initialized
+	touch ./linuxdroid-packages/.initialized
 fi
 
 echo "[*] Preparing build environment..."
-cd ./termux-packages || exit 1
+cd ./linuxdroid-packages || exit 1
 
 if [ ! -e "./setup-build-environment.sh" ]; then
     if ! cp ../scripts/setup-build-environment.sh ./ > /dev/null 2>&1; then

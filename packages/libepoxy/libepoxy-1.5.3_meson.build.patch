@@ -14,7 +14,7 @@ diff -uNr libepoxy-1.5.3/meson.build libepoxy-1.5.3.mod/meson.build
  wgl_registry = files('registry/wgl.xml')
  
  libepoxy_inc = [
-+  include_directories('@TERMUX_PREFIX@/include'),
++  include_directories('@LINUXDROID_PREFIX@/include'),
    include_directories('include'),
    include_directories('src'),
  ]

@@ -1,19 +1,19 @@
-TERMUX_PKG_MAINTAINER="Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr"
+LINUXDROID_PKG_MAINTAINER="Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr"
 
-TERMUX_PKG_DESCRIPTION="Simple text editor"
-TERMUX_PKG_DEPENDS="fltk, libc++"
-TERMUX_PKG_VERSION=1.0-termux
-TERMUX_PKG_REVISION=6
+LINUXDROID_PKG_DESCRIPTION="Simple text editor"
+LINUXDROID_PKG_DEPENDS="fltk, libc++"
+LINUXDROID_PKG_VERSION=1.0-linuxdroid
+LINUXDROID_PKG_REVISION=6
 
-termux_step_make() {
+linuxdroid_step_make() {
     "${CXX}" \
         ${CPPFLAGS} \
         ${CXXFLAGS} \
-        "${TERMUX_PKG_BUILDER_DIR}/fltk-editor.cxx" \
+        "${LINUXDROID_PKG_BUILDER_DIR}/fltk-editor.cxx" \
         -o fltk-editor \
         ${LDFLAGS} -lfltk
 }
 
-termux_step_make_install() {
-    install -Dm700 fltk-editor "${TERMUX_PREFIX}/bin/fltk-editor"
+linuxdroid_step_make_install() {
+    install -Dm700 fltk-editor "${LINUXDROID_PREFIX}/bin/fltk-editor"
 }

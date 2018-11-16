@@ -6,7 +6,7 @@ diff -uNr putty-0.70/unix/uxnet.c putty-0.70.mod/unix/uxnet.c
  
  #ifndef X11_UNIX_PATH
 -# define X11_UNIX_PATH "/tmp/.X11-unix/X"
-+# define X11_UNIX_PATH "@TERMUX_PREFIX@/tmp/.X11-unix/X"
++# define X11_UNIX_PATH "@LINUXDROID_PREFIX@/tmp/.X11-unix/X"
  #endif
  
  /* 

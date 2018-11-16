@@ -1,13 +1,13 @@
-TERMUX_PKG_MAINTAINER="Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr"
+LINUXDROID_PKG_MAINTAINER="Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr"
 
-TERMUX_PKG_HOMEPAGE=https://github.com/termux/x11-packages
-TERMUX_PKG_DESCRIPTION="A compatibility wrapper for Aterm"
-TERMUX_PKG_VERSION=1.1
-TERMUX_PKG_DEPENDS="aterm"
-TERMUX_PKG_PLATFORM_INDEPENDENT=true
+LINUXDROID_PKG_HOMEPAGE=https://github.com/linuxdroid/x11-packages
+LINUXDROID_PKG_DESCRIPTION="A compatibility wrapper for Aterm"
+LINUXDROID_PKG_VERSION=1.1
+LINUXDROID_PKG_DEPENDS="aterm"
+LINUXDROID_PKG_PLATFORM_INDEPENDENT=true
 
-termux_step_make_install() {
+linuxdroid_step_make_install() {
     install \
-        -Dm700 "${TERMUX_PKG_BUILDER_DIR}/xterm" \
-        "${TERMUX_PREFIX}/bin/xterm"
+        -Dm700 "${LINUXDROID_PKG_BUILDER_DIR}/xterm" \
+        "${LINUXDROID_PREFIX}/bin/xterm"
 }

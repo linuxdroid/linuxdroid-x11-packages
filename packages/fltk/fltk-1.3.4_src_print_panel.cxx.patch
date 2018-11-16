@@ -6,7 +6,7 @@ diff -uNr fltk-1.3.4/src/print_panel.cxx fltk-1.3.4.mod/src/print_panel.cxx
    defname[0] = '\0';
  // get names of all printers and of default one
 -  if ((lpstat = popen("LC_MESSAGES=C LANG=C /bin/sh -c '(lpstat -p -d ) 2>&-'", "r")) != NULL) { // try first with SystemV printing system
-+  if ((lpstat = popen("LC_MESSAGES=C LANG=C /data/data/com.termux/files/usr/bin/sh -c '(lpstat -p -d ) 2>&-'", "r")) != NULL) { // try first with SystemV printing system
++  if ((lpstat = popen("LC_MESSAGES=C LANG=C /data/data/com.linuxdroid/files/usr/bin/sh -c '(lpstat -p -d ) 2>&-'", "r")) != NULL) { // try first with SystemV printing system
      while (fgets(line, sizeof(line), lpstat)) {
        if (!strncmp(line, "printer ", 8) &&
            sscanf(line + 8, "%s", name) == 1) {
@@ -15,7 +15,7 @@ diff -uNr fltk-1.3.4/src/print_panel.cxx fltk-1.3.4.mod/src/print_panel.cxx
    }
    
 -  if (print_choice->size() == 2 && (lpstat = fopen("/etc/printcap", "r"))) { // try next with BSD printing system
-+  if (print_choice->size() == 2 && (lpstat = fopen("/data/data/com.termux/files/usr/etc/printcap", "r"))) { // try next with BSD printing system
++  if (print_choice->size() == 2 && (lpstat = fopen("/data/data/com.linuxdroid/files/usr/etc/printcap", "r"))) { // try next with BSD printing system
      while (fgets(line, sizeof(line),lpstat)) { // get names of all known printers
        if (*line == '#' || (p = strchr(line, '|')) == NULL) continue;
        *p = 0;
@@ -24,7 +24,7 @@ diff -uNr fltk-1.3.4/src/print_panel.cxx fltk-1.3.4.mod/src/print_panel.cxx
    if (print_choice->value()) {
      strcpy(status, "printer status unavailable");
 -    snprintf(command, sizeof(command), "/bin/sh -c \"(lpstat -p '%s' ) 2>&-\" ", printer); // try first with SystemV printing system
-+    snprintf(command, sizeof(command), "/data/data/com.termux/files/usr/bin/sh -c \"(lpstat -p '%s' ) 2>&-\" ", printer); // try first with SystemV printing system
++    snprintf(command, sizeof(command), "/data/data/com.linuxdroid/files/usr/bin/sh -c \"(lpstat -p '%s' ) 2>&-\" ", printer); // try first with SystemV printing system
      if ((lpstat = popen(command, "r")) !=  NULL) {
        if (fgets(status, sizeof(status), lpstat) == 0) { // if no reply
          pclose(lpstat);

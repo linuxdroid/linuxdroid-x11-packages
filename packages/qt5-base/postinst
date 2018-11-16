@@ -1,6 +1,6 @@
-#!/data/data/com.termux/files/usr/bin/sh
+#!/data/data/com.linuxdroid/files/usr/bin/sh
 
-PREFIX="/data/data/com.termux/files/usr"
+PREFIX="/data/data/com.linuxdroid/files/usr"
 
 if [ ! -e "${PREFIX}/lib/fonts" ]; then
     ln -sf "${PREFIX}/share/fonts/TTF" "${PREFIX}/lib/fonts"

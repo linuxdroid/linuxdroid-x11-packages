@@ -6,7 +6,7 @@ diff -uNr feh-2.25.1/src/options.c feh-2.25.1.mod/src/options.c
  	opt.menu_font = estrdup(DEFAULT_MENU_FONT);
  	opt.font = NULL;
 -	opt.menu_bg = estrdup(PREFIX "/share/feh/images/menubg_default.png");
-+	opt.menu_bg = estrdup("/data/data/com.termux/files/usr/share/feh/images/menubg_default.png");
++	opt.menu_bg = estrdup("/data/data/com.linuxdroid/files/usr/share/feh/images/menubg_default.png");
  	opt.max_height = opt.max_width = UINT_MAX;
  
  	opt.start_list_at = NULL;
@@ -15,7 +15,7 @@ diff -uNr feh-2.25.1/src/options.c feh-2.25.1.mod/src/options.c
  	free(oldrcpath);
  
 -	if (!fp && ((fp = fopen("/etc/feh/themes", "r")) == NULL))
-+	if (!fp && ((fp = fopen("/data/data/com.termux/files/usr/etc/feh/themes", "r")) == NULL))
++	if (!fp && ((fp = fopen("/data/data/com.linuxdroid/files/usr/etc/feh/themes", "r")) == NULL))
  		return;
  
  	/* Oooh. We have an options file :) */

@@ -6,7 +6,7 @@ diff -uNr aterm-1.0.1/src/rxvt.h aterm-1.0.1.mod/src/rxvt.h
  #endif
  
 -#define DEFAULT_SHELL "/bin/bash"
-+#define DEFAULT_SHELL "@TERMUX_PREFIX@/bin/bash"
++#define DEFAULT_SHELL "@LINUXDROID_PREFIX@/bin/bash"
  
  /* sort out conflicts in feature.h */
  #ifdef KANJI

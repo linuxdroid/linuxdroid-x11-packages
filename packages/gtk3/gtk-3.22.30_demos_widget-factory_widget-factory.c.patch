@@ -6,7 +6,7 @@ diff -uNr gtk-3.22.30/demos/widget-factory/widget-factory.c gtk-3.22.30.mod/demo
    gtk_flow_box_insert (GTK_FLOW_BOX (flowbox), child, -1);
  
 -  location = "/usr/share/backgrounds/gnome";
-+  location = "/data/data/com.termux/files/usr/share/backgrounds/gnome";
++  location = "/data/data/com.linuxdroid/files/usr/share/backgrounds/gnome";
    dir = g_dir_open (location, 0, &error);
    if (error)
      {

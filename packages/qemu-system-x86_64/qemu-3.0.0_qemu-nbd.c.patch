@@ -6,7 +6,7 @@ diff -uNr qemu-3.0.0/qemu-nbd.c qemu-3.0.0.mod/qemu-nbd.c
  #include "qemu-version.h"
  
 -#define SOCKET_PATH                "/var/lock/qemu-nbd-%s"
-+#define SOCKET_PATH                "@TERMUX_PREFIX@/var/lock/qemu-nbd-%s"
++#define SOCKET_PATH                "@LINUXDROID_PREFIX@/var/lock/qemu-nbd-%s"
  #define QEMU_NBD_OPT_CACHE         256
  #define QEMU_NBD_OPT_AIO           257
  #define QEMU_NBD_OPT_DISCARD       258

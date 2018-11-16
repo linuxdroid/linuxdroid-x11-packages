@@ -1,6 +1,6 @@
-#!@TERMUX_PREFIX@/bin/sh
+#!@LINUXDROID_PREFIX@/bin/sh
 
-if [ -d "@TERMUX_PREFIX@/share/applications" ]; then
+if [ -d "@LINUXDROID_PREFIX@/share/applications" ]; then
     update-desktop-database -q
 fi
 

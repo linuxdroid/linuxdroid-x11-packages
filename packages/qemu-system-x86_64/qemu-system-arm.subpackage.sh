@@ -1,7 +1,7 @@
-TERMUX_SUBPKG_INCLUDE="
+LINUXDROID_SUBPKG_INCLUDE="
 bin/qemu-system-arm
 share/man/man1/qemu-system-arm.1
 "
 
-TERMUX_SUBPKG_DEPENDS="glib, libandroid-shmem, libandroid-support, libbz2, libc++, libcurl, libgnutls, libjpeg-turbo, liblzo, libnettle, libpixman, libpng, libsasl, libssh2, libutil, ncurses, qemu-common, sdl2"
-TERMUX_SUBPKG_DESCRIPTION="A generic and open source machine emulator (arm)"
+LINUXDROID_SUBPKG_DEPENDS="glib, libandroid-shmem, libandroid-support, libbz2, libc++, libcurl, libgnutls, libjpeg-turbo, liblzo, libnettle, libpixman, libpng, libsasl, libssh2, libutil, ncurses, qemu-common, sdl2"
+LINUXDROID_SUBPKG_DESCRIPTION="A generic and open source machine emulator (arm)"

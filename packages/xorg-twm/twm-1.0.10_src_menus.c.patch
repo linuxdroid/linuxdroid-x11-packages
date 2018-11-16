@@ -6,7 +6,7 @@ diff -uNr twm-1.0.10/src/menus.c twm-1.0.10.mod/src/menus.c
  	break;
     case F_STARTWM:
 -	execlp("/bin/sh", "sh", "-c", action, (void *)NULL);
-+	execlp("@TERMUX_PREFIX@/bin/sh", "sh", "-c", action, (void *)NULL);
++	execlp("@LINUXDROID_PREFIX@/bin/sh", "sh", "-c", action, (void *)NULL);
  	fprintf (stderr, "%s:  unable to start:  %s\n", ProgramName, *Argv);
  	break;
  

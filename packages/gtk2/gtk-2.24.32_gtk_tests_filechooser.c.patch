@@ -7,17 +7,17 @@ diff -uNr gtk-2.24.32/gtk/tests/filechooser.c gtk-2.24.32.mod/gtk/tests/filechoo
  #define FILE_NAME_2 "/nonexistent2"
 -#define FOLDER_NAME "/etc"
 -#define FOLDER_NAME_2 "/usr"
-+#define FOLDER_NAME "@TERMUX_PREFIX@/etc"
-+#define FOLDER_NAME_2 "@TERMUX_PREFIX@"
++#define FOLDER_NAME "@LINUXDROID_PREFIX@/etc"
++#define FOLDER_NAME_2 "@LINUXDROID_PREFIX@"
  #else
 -#define FILE_NAME "/etc/passwd"
 -#define FILE_NAME_2 "/etc/group"
 -#define FOLDER_NAME "/etc"
 -#define FOLDER_NAME_2 "/usr"
-+#define FILE_NAME "@TERMUX_PREFIX@/etc/passwd"
-+#define FILE_NAME_2 "@TERMUX_PREFIX@/etc/group"
-+#define FOLDER_NAME "@TERMUX_PREFIX@/etc"
-+#define FOLDER_NAME_2 "@TERMUX_PREFIX@"
++#define FILE_NAME "@LINUXDROID_PREFIX@/etc/passwd"
++#define FILE_NAME_2 "@LINUXDROID_PREFIX@/etc/group"
++#define FOLDER_NAME "@LINUXDROID_PREFIX@/etc"
++#define FOLDER_NAME_2 "@LINUXDROID_PREFIX@"
  #endif
  
  #define CURRENT_NAME "parangaricutirimicuaro.txt"
@@ -26,10 +26,10 @@ diff -uNr gtk-2.24.32/gtk/tests/filechooser.c gtk-2.24.32.mod/gtk/tests/filechoo
  
    /* first test for a file we know will always exist */
 -  passed = passed && test_confirm_overwrite_for_path ("/etc/passwd", FALSE);
-+  passed = passed && test_confirm_overwrite_for_path ("@TERMUX_PREFIX@/etc/passwd", FALSE);
++  passed = passed && test_confirm_overwrite_for_path ("@LINUXDROID_PREFIX@/etc/passwd", FALSE);
    g_assert (passed);
 -  passed = passed && test_confirm_overwrite_for_path ("/etc/resolv.conf", TRUE);
-+  passed = passed && test_confirm_overwrite_for_path ("@TERMUX_PREFIX@/etc/resolv.conf", TRUE);
++  passed = passed && test_confirm_overwrite_for_path ("@LINUXDROID_PREFIX@/etc/resolv.conf", TRUE);
    g_assert (passed);
  }
  #endif

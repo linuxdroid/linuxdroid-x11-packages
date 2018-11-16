@@ -6,8 +6,8 @@ diff -uNr The-Powder-Toy-93.3/src/client/Client.cpp The-Powder-Toy-93.3.mod/src/
  	//Read config
  	std::ifstream configFile;
 -	configFile.open("powder.pref", std::ios::binary);
-+    MakeDirectory("/data/data/com.termux/files/home/.powdertoy");
-+	configFile.open("/data/data/com.termux/files/home/.powdertoy/powder.pref", std::ios::binary);
++    MakeDirectory("/data/data/com.linuxdroid/files/home/.powdertoy");
++	configFile.open("/data/data/com.linuxdroid/files/home/.powdertoy/powder.pref", std::ios::binary);
  	if (configFile)
  	{
  		try
@@ -16,8 +16,8 @@ diff -uNr The-Powder-Toy-93.3/src/client/Client.cpp The-Powder-Toy-93.3.mod/src/
  {
  	std::ofstream configFile;
 -	configFile.open("powder.pref", std::ios::trunc);
-+    MakeDirectory("/data/data/com.termux/files/home/.powdertoy");
-+	configFile.open("/data/data/com.termux/files/home/.powdertoy/powder.pref", std::ios::trunc);
++    MakeDirectory("/data/data/com.linuxdroid/files/home/.powdertoy");
++	configFile.open("/data/data/com.linuxdroid/files/home/.powdertoy/powder.pref", std::ios::trunc);
  	
  	if (configFile)
  	{
@@ -25,7 +25,7 @@ diff -uNr The-Powder-Toy-93.3/src/client/Client.cpp The-Powder-Toy-93.3.mod/src/
  	<< std::setw(2) << std::setfill('0') << std::hex << lastStampName;
  	std::string filename = std::string(STAMPS_DIR PATH_SEP + saveID.str()+".stm").c_str();
  
-+	MakeDirectory("/data/data/com.termux/files/home/.powdertoy");
++	MakeDirectory("/data/data/com.linuxdroid/files/home/.powdertoy");
  	MakeDirectory(STAMPS_DIR);
  	
  	Json::Value stampInfo;
@@ -33,7 +33,7 @@ diff -uNr The-Powder-Toy-93.3/src/client/Client.cpp The-Powder-Toy-93.3.mod/src/
  
  void Client::updateStamps()
  {
-+	MakeDirectory("/data/data/com.termux/files/home/.powdertoy");
++	MakeDirectory("/data/data/com.linuxdroid/files/home/.powdertoy");
  	MakeDirectory(STAMPS_DIR);
  
  	std::ofstream stampsStream;

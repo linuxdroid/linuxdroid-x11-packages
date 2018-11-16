@@ -6,7 +6,7 @@ diff -uNr The-Powder-Toy-93.3/src/gui/options/OptionsView.cpp The-Powder-Toy-93.
  #endif
  			char* workingDirectory = new char[FILENAME_MAX+strlen(openCommand)];
 -			sprintf(workingDirectory, "%s\"%s\"", openCommand, getcwd(NULL, 0));
-+			sprintf(workingDirectory, "%s\"%s\"", openCommand, "/data/data/com.termux/files/home/.powdertoy");
++			sprintf(workingDirectory, "%s\"%s\"", openCommand, "/data/data/com.linuxdroid/files/home/.powdertoy");
  			system(workingDirectory);
  			delete[] workingDirectory;
  		}

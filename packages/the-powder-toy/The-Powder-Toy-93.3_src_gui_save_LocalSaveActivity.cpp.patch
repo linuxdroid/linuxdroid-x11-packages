@@ -5,7 +5,7 @@ diff -uNr The-Powder-Toy-93.3/src/gui/save/LocalSaveActivity.cpp The-Powder-Toy-
  
  void LocalSaveActivity::saveWrite(std::string finalFilename)
  {
-+	Client::Ref().MakeDirectory("/data/data/com.termux/files/home/.powdertoy");
++	Client::Ref().MakeDirectory("/data/data/com.linuxdroid/files/home/.powdertoy");
  	Client::Ref().MakeDirectory(LOCAL_SAVE_DIR);
  	GameSave *gameSave = save.GetGameSave();
  	Json::Value localSaveInfo;

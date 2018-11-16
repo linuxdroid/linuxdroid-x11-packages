@@ -7,8 +7,8 @@ diff -uNr qemu-3.0.0/include/net/net.h qemu-3.0.0.mod/include/net/net.h
  
 -#define DEFAULT_NETWORK_SCRIPT "/etc/qemu-ifup"
 -#define DEFAULT_NETWORK_DOWN_SCRIPT "/etc/qemu-ifdown"
-+#define DEFAULT_NETWORK_SCRIPT "@TERMUX_PREFIX@/etc/qemu-ifup"
-+#define DEFAULT_NETWORK_DOWN_SCRIPT "@TERMUX_PREFIX@/etc/qemu-ifdown"
++#define DEFAULT_NETWORK_SCRIPT "@LINUXDROID_PREFIX@/etc/qemu-ifup"
++#define DEFAULT_NETWORK_DOWN_SCRIPT "@LINUXDROID_PREFIX@/etc/qemu-ifdown"
  #define DEFAULT_BRIDGE_HELPER CONFIG_QEMU_HELPERDIR "/qemu-bridge-helper"
  #define DEFAULT_BRIDGE_INTERFACE "br0"
  

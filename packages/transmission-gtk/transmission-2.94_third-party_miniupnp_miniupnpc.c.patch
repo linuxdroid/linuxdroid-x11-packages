@@ -6,7 +6,7 @@ diff -uNr transmission-2.94/third-party/miniupnp/miniupnpc.c transmission-2.94.m
  	/* first try to get infos from minissdpd ! */
  	if(!minissdpdsock)
 -		minissdpdsock = "/var/run/minissdpd.sock";
-+		minissdpdsock = "@TERMUX_PREFIX@/var/run/minissdpd.sock";
++		minissdpdsock = "@LINUXDROID_PREFIX@/var/run/minissdpd.sock";
  	while(!devlist && deviceList[deviceIndex]) {
  		devlist = getDevicesFromMiniSSDPD(deviceList[deviceIndex],
  		                                  minissdpdsock);

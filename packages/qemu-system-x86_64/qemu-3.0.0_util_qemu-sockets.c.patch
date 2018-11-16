@@ -6,7 +6,7 @@ diff -uNr qemu-3.0.0/util/qemu-sockets.c qemu-3.0.0.mod/util/qemu-sockets.c
      } else {
          const char *tmpdir = getenv("TMPDIR");
 -        tmpdir = tmpdir ? tmpdir : "/tmp";
-+        tmpdir = tmpdir ? tmpdir : "@TERMUX_PREFIX@/tmp";
++        tmpdir = tmpdir ? tmpdir : "@LINUXDROID_PREFIX@/tmp";
          path = pathbuf = g_strdup_printf("%s/qemu-socket-XXXXXX", tmpdir);
      }
  

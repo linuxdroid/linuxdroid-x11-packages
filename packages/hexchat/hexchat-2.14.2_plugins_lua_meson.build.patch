@@ -7,7 +7,7 @@ diff -uNr hexchat-2.14.2/plugins/lua/meson.build hexchat-2.14.2.mod/plugins/lua/
 -else
 -  lua_dep = dependency(get_option('with-lua'))
 -endif
-+lua_dep = cc.find_library('lua',  dirs : '@TERMUX_PREFIX@/lib')
++lua_dep = cc.find_library('lua',  dirs : '@LINUXDROID_PREFIX@/lib')
  
  shared_module('lua', 'lua.c',
    dependencies: [libgio_dep, hexchat_plugin_dep, lua_dep],
